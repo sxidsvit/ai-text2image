@@ -5,16 +5,14 @@
 
 ### Core Application Idea 
 
-The service provides an API for generating images based on text descriptions. 
-
-The API route /api/image/generate-image leverages the capabilities of the [Clipdrop API](https://clipdrop.co/apis/docs/text-to-image) to convert text into images. 
-
+The service provides an API for generating images based on text descriptions.<br/> 
+The API route /api/image/generate-image leverages the capabilities of the [Clipdrop API](https://clipdrop.co/apis/docs/text-to-image) to convert text into images. <br/>
 The service features an intuitive web interface for user convenience.
 
 ---
 
-<!-- ![]()
-<img src="demo.gif" alt="Table" width="600" height="450" style="display: block; margin-left:100px ;"> -->
+![]()
+<img src="demo.gif" alt="Table" width="600" height="450" style="display: block; margin-left:100px ;"> 
 
 ---
 
@@ -36,33 +34,12 @@ The service features an intuitive web interface for user convenience.
 
 #### 3. Main API routes:
 
-##### User Router:
+##### 3.1 User Router:
+- Register user & login user.
 - Processing payments via Razorpay and Stripe.
 - Check user credit.
 
-##### Image Router:
-- text to image generate via /api/image/generate-image API.
-
-#### 4. Configuration via . env:
-
-- Environment variables contain API keys and configuration settings for the client and server.
-
----
-
-### Tech Stack
-
-- Client:  React.js 18,  React Router 6,  Tailwind CSS, Clipdrop,  AXIOS,  VITE
-
-- Server: NODE,  EXPRESS,  MONGODB,  AXIOS, CLIPDROP,  RAZORPAY,  STRIPE, JSON WEB TOKEN,  FORM DATA, BCRYPT
-
-<img src="db-tables.jpg" alt="Table" width="450" height="300" style="display: block; margin-left:100px ;">
-
----
-
-### Routing
-
 ``` js 
-User Router:
 userRouter.post('/register', registerUser)
 userRouter.post('/login', loginUser)
 userRouter.get('/credits', authUser, userCredits)
@@ -70,16 +47,22 @@ userRouter.post('/pay-razor', authUser, paymentRazorpay)
 userRouter.post('/verify-razor', verifyRazorpay)
 userRouter.post('/pay-stripe', authUser, paymentStripe)
 userRouter.post('/verify-stripe', authUser, verifyStripe)
+```
 
-Image Router:
+##### 3.2 Text to Image Router:
+- text to image generate via /api/image/generate-image API.
+
+``` js 
 imageRouter.post('/generate-image', authUser, generateImage)
-
 ```
 
 <img src="api-testing.jpg" alt="API testing" width="900" height="400" style="display: block; margin-left:0px ;">
 ---
 
-### .env 
+
+#### 4. Configuration via . env:
+
+- Environment variables contain API keys and configuration settings for the client and server.
 
 ``` js 
 Client: 
@@ -96,8 +79,18 @@ RAZORPAY_KEY_SECRET =
 STRIPE_SECRET_KEY=
 ```
 
+---
+
+### Tech Stack
+
+- Client:  React.js 18,  React Router 6,  Tailwind CSS, Clipdrop,  AXIOS,  VITE
+
+- Server: NODE,  EXPRESS,  MONGODB,  AXIOS, CLIPDROP,  RAZORPAY,  STRIPE, JSON WEB TOKEN,  FORM DATA, BCRYPT
+
+<img src="db-tables.jpg" alt="Table" width="450" height="300" style="display: block; margin-left:100px ;">
 
 ---
+
 
 ##### Contact with me:
 
