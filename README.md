@@ -1,12 +1,15 @@
-
 ## Text to image with AI 
 
-<!-- [SITE](https://erase-bg-sxidsvit.vercel.app/) -->
-<a href="https://erase-bg-sxidsvit.vercel.app/" target="_blank">CITE</a>
+[SITE](https://ai-text2image-sxidsvit.vercel.app/)
 
 
 ### Core Application Idea 
-The  site is designed to automatically remove background from images. The /remove-bg API route, which is used for image processing and background removal. The site provides a simple to use web interface where the user can upload an image and then get a version without background.
+
+The service provides an API for generating images based on text descriptions. 
+
+The API route /api/image/generate-image leverages the capabilities of the [Clipdrop API](https://clipdrop.co/apis/docs/text-to-image) to convert text into images. 
+
+The service features an intuitive web interface for user convenience.
 
 ---
 
@@ -19,6 +22,7 @@ The  site is designed to automatically remove background from images. The /remov
 #### 1. Frontend (client part):
 - Based on React.js using React Router for routing.
 - Uses Tailwind CSS for styling.
+- Uses Clipdrop API to convert text into images.
 - AXIOS is used to send HTTP requests.
 - Designed with the Vite Collector, which speeds up development and improves performance.
 
@@ -47,9 +51,9 @@ The  site is designed to automatically remove background from images. The /remov
 
 ### Tech Stack
 
-- Client:  React.js 18,  React Router 6,  Tailwind CSS,  AXIOS,  VITE
+- Client:  React.js 18,  React Router 6,  Tailwind CSS, Clipdrop,  AXIOS,  VITE
 
-- Server: NODE,  EXPRESS,  MONGODB,  AXIOS,  RAZORPAY,  STRIPE, JSON WEB TOKEN,  FORM DATA, BCRYPT
+- Server: NODE,  EXPRESS,  MONGODB,  AXIOS, CLIPDROP,  RAZORPAY,  STRIPE, JSON WEB TOKEN,  FORM DATA, BCRYPT
 
 <img src="db-tables.jpg" alt="Table" width="450" height="300" style="display: block; margin-left:100px ;">
 

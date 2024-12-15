@@ -43,7 +43,7 @@ const Header = () => {
                 transition={{ delay: 0.4, duration: 2 }}
             >
 
-                Transform text into <span className='text-blue-600'>image</span>, instantly!.
+                Turn your words into <br /> <span className='text-blue-600'>works of art!</span>
             </motion.h1>
 
             <motion.p
